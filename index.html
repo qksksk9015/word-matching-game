@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>단어 매칭 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .words, .meanings {
+            display: flex;
+            flex-direction: column;
+        }
+        .draggable {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+            cursor: grab;
+            border: 1px solid #000;
+            touch-action: none;
+        }
+        .droppable {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightgray;
+            border: 1px dashed #000;
+            min-height: 30px;
+        }
+    </style>
 </head>
-    <script src="script.js" defer></script>
 <body>
-    <h1>환영합니다! 단어 매칭 게임에 오신 것을 환영합니다.</h1>
+    <h1>단어 매칭 게임</h1>
+    <p>단어를 해당하는 뜻 위로 드래그하여 놓으세요.</p>
+    <div class="container">
+        <div class="words" id="words"></div>
+        <div class="meanings" id="meanings"></div>
+    </div>
+    <p id="result"></p>
+
+    <!-- JavaScript 파일 불러오기 -->
+    <script src="script.js" defer></script>
 </body>
 </html>
