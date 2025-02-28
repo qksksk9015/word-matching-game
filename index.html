@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!-- 페이지 틀-->
+<!DOCTYPE html> 
+<html lang="ko"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--모바일에서도 표시되도록-->
     <title>단어 매칭 게임</title>
-    <style>
+    <!--디자인, 애니메이션 설정-->
+    <style> 
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #EDAFB8;
         }
         .container {
             display: flex;
@@ -33,7 +36,7 @@
             background-color: deepskyblue; /* 마우스를 올리면 색이 변경됨 */
             transform: scale(1.05); /* 약간 커지는 효과 추가 */
         }
-        
+
         .droppable {
             padding: 10px;
             margin: 5px;
@@ -44,13 +47,13 @@
     </style>
 </head>
 <body>
-    <h1>단어 매칭 게임</h1>
-    <p>단어를 해당하는 뜻 위로 드래그하여 놓으세요.</p>
+    <h1>단어 매칭 게임</h1> <!--제목-->
+    <p>단어를 해당하는 뜻 위로 드래그하여 놓으세요.</p> <!-- 설명문-->
     <div class="container">
         <div class="words" id="words"></div>
         <div class="meanings" id="meanings"></div>
     </div>
-    <p id="result"></p>
+    <p id="result"></p> <!--정답여부 표시-->
     <!-- 효과음 추가 -->
     <audio id="success-sound" src="audio/success.wav" preload="auto"></audio>
     <audio id="failure-sound" src="audio/failure.wav" preload="auto"></audio>
