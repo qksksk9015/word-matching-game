@@ -44,6 +44,20 @@
             border: 1px dashed #000;
             min-height: 30px; /* 최소 높이 30px로 설정 */
         }
+        /* 버튼스타일 */
+        .reset-btn {
+            background-color: yellow;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px; //* 둥근모서리*/
+            margin-top : 20px; /* 버튼과 위 요소사이의 여백*/
+        }
+        .reset-btn:hover {
+            background-color: gold;
+        }
         .draggable, .droppable {
             width: 200px;  /* 박스 크기 증가 */
             font-size: 18px; /* 글자 크기 증가 */
@@ -62,18 +76,6 @@
     <h1>단어 매칭 게임</h1> <!--제목-->
     <p>단어를 해당하는 뜻 위로 드래그하여 놓으세요.</p> <!-- 설명문-->
     <button onclick="setupGame()" class="reset-btn">게임 다시 시작</button>
-        .reset-btn {
-            background-color: yellow;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .reset-btn:hover {
-            background-color: darkyellow;
-        }
     <div class="container">
         <div class="words" id="words"></div>
         <div class="meanings" id="meanings"></div>
