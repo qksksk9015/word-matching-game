@@ -8,9 +8,9 @@
     <!--디자인, 애니메이션 설정-->
     <style> 
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Comic Sans MS", cursive, sans-serif; /* 폰트 변경 */
             text-align: center;
-            background-color: #EDAFB8;
+            background-color: #F7E1D7;
         }
         .container {
             display: flex;
@@ -44,6 +44,18 @@
             border: 1px dashed #000;
             min-height: 30px;
         }
+        .draggable, .droppable {
+            width: 200px;  /* 박스 크기 증가 */
+            font-size: 18px; /* 글자 크기 증가 */
+        }
+        @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        }
+
+
     </style>
 </head>
 <body>
