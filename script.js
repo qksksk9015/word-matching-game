@@ -89,6 +89,10 @@
                 target.innerHTML = `<b>${target.innerText}</b>`;
                 target.style.backgroundColor = "lightgreen";
                 document.querySelector(`.draggable[data-word='${word}']`).remove();
+
+            // 효과음 재생
+                const successSound = document.getElementById("success-sound");
+                successSound.play(); // 정답 맞췄을 때 효과음 재생
                 checkCompletion();
             }
         }
