@@ -12,22 +12,36 @@
             text-align: center;
             background-color: #F7E1D7;
         }
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 20px;
-            flex-wrap: wrap;
+        <button onclick="setupGame()" class="reset-btn">게임 다시 시작</button>
+        .reset-btn {
+            background-color: yellow;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .reset-btn:hover {
+            background-color: darkyellow;
+        }
+
+        .container { /* 단어 뜻을 감싸는 영역*/
+            display: flex; /*flexbox를 사용하여 가로정렬*/
+            justify-content: center; /*내부요소(단어& 뜻 영역)을 중앙정렬*/
+            gap: 50px;  /*요소간의 간격을 50px로 설정*/
+            margin-top: 20px; /*위쪽 여백을 20px 추가*/
+            flex-wrap: wrap; /*화면이 작아지면 자동으로 줄바꿈*/
         }
         .words, .meanings {
             display: flex;
             flex-direction: column;
         }
-        .draggable {
-            padding: 10px;
-            margin: 5px;
+        .draggable { /*드래그할수있는 단어스타일*/
+            padding: 10px; /*내부여백 : 10px*/
+            margin: 5px; /*바깥여백 : 5px*/
             background-color: #DEDBD2;
-            cursor: grab;
+            cursor: grab; /* 마우스 올렸을때 커서모양 grab으로 변경*/
             border: 1px solid #000;
             touch-action: none;
             transition: background-color 0.3s ease, transform 0.2s ease;
@@ -42,7 +56,7 @@
             margin: 5px;
             background-color: #EDAFB8;
             border: 1px dashed #000;
-            min-height: 30px;
+            min-height: 30px; /* 최소 높이 30px로 설정 */
         }
         .draggable, .droppable {
             width: 200px;  /* 박스 크기 증가 */
