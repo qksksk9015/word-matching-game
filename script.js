@@ -95,6 +95,11 @@
                 successSound.play(); // 정답 맞췄을 때 효과음 재생
                 checkCompletion();
             }
+           else
+            {
+               const failureSound = document.getElementById("failure-sound");
+                failureSound.play(); // 정답 맞췄을 때 효과음 재생
+            }
         }
 
         function checkCompletion() {
