@@ -12,20 +12,6 @@
             text-align: center;
             background-color: #F7E1D7;
         }
-        <button onclick="setupGame()" class="reset-btn">게임 다시 시작</button>
-        .reset-btn {
-            background-color: yellow;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .reset-btn:hover {
-            background-color: darkyellow;
-        }
-
         .container { /* 단어 뜻을 감싸는 영역*/
             display: flex; /*flexbox를 사용하여 가로정렬*/
             justify-content: center; /*내부요소(단어& 뜻 영역)을 중앙정렬*/
@@ -75,6 +61,19 @@
 <body>
     <h1>단어 매칭 게임</h1> <!--제목-->
     <p>단어를 해당하는 뜻 위로 드래그하여 놓으세요.</p> <!-- 설명문-->
+    <button onclick="setupGame()" class="reset-btn">게임 다시 시작</button>
+        .reset-btn {
+            background-color: yellow;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .reset-btn:hover {
+            background-color: darkyellow;
+        }
     <div class="container">
         <div class="words" id="words"></div>
         <div class="meanings" id="meanings"></div>
