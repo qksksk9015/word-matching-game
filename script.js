@@ -89,6 +89,9 @@
                 target.innerHTML = `<b>${target.innerText}</b>`;
                 // target.style.backgroundColor = "lightgreen";
                 document.querySelector(`.draggable[data-word='${word}']`).remove();
+                       // 서서히 사라지는 애니메이션 효과 적용
+            target.style.transition = "opacity 0.5s ease";
+            target.style.opacity = "0"; // 투명하게 만들기
             setTimeout(() => {
                 target.remove(); // 뜻 제거
                 checkCompletion(); // 게임 완료 여부 확인
