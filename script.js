@@ -87,7 +87,7 @@
         function handleDrop(word, target) {
             if (word === target.dataset.word) {
                 target.innerHTML = `<b>${target.innerText}</b>`;
-                target.style.backgroundColor = "lightgreen";
+                // target.style.backgroundColor = "lightgreen";
                 document.querySelector(`.draggable[data-word='${word}']`).remove();
                 target.remove();
 
