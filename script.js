@@ -89,7 +89,10 @@
                 target.innerHTML = `<b>${target.innerText}</b>`;
                 // target.style.backgroundColor = "lightgreen";
                 document.querySelector(`.draggable[data-word='${word}']`).remove();
-                target.remove();
+            setTimeout(() => {
+                target.remove(); // 뜻 제거
+                checkCompletion(); // 게임 완료 여부 확인
+            }, 100); // 100ms(0.1초) 후 실행
 
             // 효과음 재생
                 const successSound = document.getElementById("success-sound");
