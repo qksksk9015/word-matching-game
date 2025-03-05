@@ -89,6 +89,7 @@
                 target.innerHTML = `<b>${target.innerText}</b>`;
                 target.style.backgroundColor = "lightgreen";
                 document.querySelector(`.draggable[data-word='${word}']`).remove();
+                target.remove();
 
             // 효과음 재생
                 const successSound = document.getElementById("success-sound");
