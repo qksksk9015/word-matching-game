@@ -92,7 +92,7 @@
             setTimeout(() => {
                 target.remove(); // 뜻 제거
                 checkCompletion(); // 게임 완료 여부 확인
-            }, 100); // 100ms(0.1초) 후 실행
+            }, 500); // 100ms(0.5초) 후 실행
 
             // 효과음 재생
                 const successSound = document.getElementById("success-sound");
